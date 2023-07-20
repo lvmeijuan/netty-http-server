@@ -46,6 +46,7 @@ public class NettyHttpRequest implements FullHttpRequest {
     public long getLongPathValue(int index){
         String[] paths = uri().split("/");
         return Long.parseLong(paths[index]);
+        return Long.parseLong(paths[index]);
     }
 
     public long getLongPathValue1(int index){
@@ -57,10 +58,7 @@ public class NettyHttpRequest implements FullHttpRequest {
         return Long.parseLong(paths[index]);
     }
    
-    public int getIntPathValue(int index){
-        String[] paths = uri().split("/");
-        return Integer.parseInt(paths[index]);
-    }
+  
 
     public boolean isAllowed(String method){
         return getMethod().name().equalsIgnoreCase(method);
